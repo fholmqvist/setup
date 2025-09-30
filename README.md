@@ -15,7 +15,7 @@ Various settings and files to setting up a new machine.
 ```bash
 sudo apt update
 sudo apt upgrade
-sudo apt -y install build-essential cmake libx11-dev libxinerama-dev sharutils suckless-tools libxft-dev stterm
+sudo apt -y install build-essential cmake libx11-dev libxinerama-dev sharutils suckless-tools libxft-dev stterm gh
 ```
 
 ### DWM
@@ -64,6 +64,9 @@ See [installation instructors for Linux](https://code.visualstudio.com/docs/setu
 
 **Plugins:**
 * clangd
+* CMake
+* Comment Anchors
+* Comment Divider
 * Go
 * hacker dark PRO
 * Material Icon Theme
