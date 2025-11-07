@@ -6,7 +6,7 @@ AllowShortEnumsOnASingleLine: false
 IndentCaseBlocks: true
 IndentCaseLabels: true
 PointerAlignment: Left
-ReferenceAlignment: Right
+ReferenceAlignment: Left
 SeparateDefinitionBlocks: Always
 Cpp11BracedListStyle: false
 InsertBraces: true
