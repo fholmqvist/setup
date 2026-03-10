@@ -28,4 +28,6 @@ fi
 
 export PATH=$PATH:/usr/local/go/bin
 
-slstatus &
+if [ -n "$DISPLAY" ] && ! pgrep -x "slstatus" > /dev/null; then
+    slstatus &
+fi
