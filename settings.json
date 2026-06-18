@@ -3,9 +3,11 @@
         APPEARANCE
   */
 
+  "workbench.colorTheme": "fdark",
+  "editor.fontFamily": "Berkeley Mono",
+  // "editor.fontFamily": "Fira Code",
   "workbench.iconTheme": "material-icon-theme",
 
-  "editor.fontFamily": "Berkeley Mono",
   "editor.fontSize": 16,
   "editor.fontLigatures": true,
   "editor.fontWeight": 100,
@@ -20,11 +22,13 @@
 
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.acceptSuggestionOnEnter": "on",
+  "files.trimTrailingWhitespace": true,
 
   /*
           TURNING OFF FEATURES
   */
 
+  "update.mode": "none",
   "window.titleBarStyle": "custom",
   "window.customMenuBarAltFocus": false,
   "editor.minimap.enabled": false,
@@ -32,8 +36,12 @@
   "explorer.confirmDelete": false,
   "workbench.startupEditor": "none",
   "html.autoCreateQuotes": false,
-  "javascript.preferences.quoteStyle": "single",
+  "js/ts.preferences.quoteStyle": "single",
   "extensions.ignoreRecommendations": true,
+  "editor.folding": false,
+  "workbench.browser.showInTitleBar": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
 
   /*
           FILE SETTINGS
@@ -61,7 +69,8 @@
     "*.qtpl": "html",
     "*.heex": "phoenix-heex",
     "*.gohtml": "go",
-    "*.lock": "yaml"
+    "*.lock": "yaml",
+    "*.fs": "glsl"
   },
 
   /*
@@ -76,6 +85,7 @@
     "EDITOR": "code --wait",
     "GIT_EDITOR": "code --wait"
   },
+  "terminal.integrated.initialHint": false,
 
   /*
           CALVA
@@ -89,7 +99,6 @@
           LANGUAGE SPECIFIC
   */
 
-  "go.toolsManagement.autoUpdate": true,
   "[go]": {
     "editor.tabSize": 8
   },
@@ -112,10 +121,6 @@
     "editor.formatOnType": true,
     "editor.insertSpaces": true,
     "editor.semanticHighlighting.enabled": true
-  },
-  "[erlang]": {
-    "editor.defaultFormatter": "erlang-ls.erlang-ls",
-    "editor.codeLens": false
   },
   "[javascript]": {
     "editor.tabSize": 2,
@@ -158,142 +163,13 @@
   "github.copilot.renameSuggestions.triggerAutomatically": false,
   "chat.commandCenter.enabled": false,
   "chat.agent.enabled": false,
+  "chat.disableAIFeatures": true,
 
   /*
-          REMOVE ITALICS, BOLD FROM THEMES
+          OTHER
   */
 
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": [
-          "comment",
-          "comment.block",
-          "comment.block.documentation",
-          "comment.line",
-          "constant",
-          "constant.character",
-          "constant.character.escape",
-          "constant.numeric",
-          "constant.numeric.integer",
-          "constant.numeric.float",
-          "constant.numeric.hex",
-          "constant.numeric.octal",
-          "constant.other",
-          "constant.regexp",
-          "constant.rgb-value",
-          "emphasis",
-          "entity",
-          "entity.name",
-          "entity.name.class",
-          "entity.name.function",
-          "entity.name.method",
-          "entity.name.section",
-          "entity.name.selector",
-          "entity.name.tag",
-          "entity.name.type",
-          "entity.other",
-          "entity.other.attribute-name",
-          "entity.other.inherited-class",
-          "invalid",
-          "invalid.deprecated",
-          "invalid.illegal",
-          "keyword",
-          "keyword.control",
-          "keyword.operator",
-          "keyword.operator.new",
-          "keyword.operator.assignment",
-          "keyword.operator.arithmetic",
-          "keyword.operator.logical",
-          "keyword.other",
-          "markup",
-          "markup.bold",
-          "markup.changed",
-          "markup.deleted",
-          "markup.heading",
-          "markup.inline.raw",
-          "markup.inserted",
-          "markup.italic",
-          "markup.list",
-          "markup.list.numbered",
-          "markup.list.unnumbered",
-          "markup.other",
-          "markup.quote",
-          "markup.raw",
-          "markup.underline",
-          "markup.underline.link",
-          "meta",
-          "meta.block",
-          "meta.cast",
-          "meta.class",
-          "meta.function",
-          "meta.function-call",
-          "meta.preprocessor",
-          "meta.return-type",
-          "meta.selector",
-          "meta.tag",
-          "meta.type.annotation",
-          "meta.type",
-          "punctuation.definition.string.begin",
-          "punctuation.definition.string.end",
-          "punctuation.separator",
-          "punctuation.separator.continuation",
-          "punctuation.terminator",
-          "storage",
-          "storage.modifier",
-          "storage.type",
-          "string",
-          "string.interpolated",
-          "string.other",
-          "string.quoted",
-          "string.quoted.double",
-          "string.quoted.other",
-          "string.quoted.single",
-          "string.quoted.triple",
-          "string.regexp",
-          "string.unquoted",
-          "strong",
-          "support",
-          "support.class",
-          "support.constant",
-          "support.function",
-          "support.other",
-          "support.type",
-          "support.type.property-name",
-          "support.variable",
-          "variable",
-          "variable.language",
-          "variable.name",
-          "variable.other",
-          "variable.other.readwrite",
-          "variable.parameter",
-          "keyword.local.lua",
-          "storage.type.numeric.go",
-          "support.function.builtin.go",
-          "storage.type.error.go",
-          "keyword.import.go",
-          "keyword.package.go",
-          "entity.alias.import.go",
-          "punctuation.definition.comment.go",
-          "comment.line.double-slash.go",
-          "storage.type.string.go",
-          "storage.type.boolean.go",
-          "source.rust meta.attribute.rust",
-          "keyword.control.import.tsx",
-          "keyword.control.export.tsx",
-          "variable.other.property.tsx",
-          "entity.other.attribute-name.tsx",
-          "support.type.primitive.tsx",
-          "variable.other.object.property.tsx"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
-  },
   "git.openRepositoryInParentFolders": "never",
-  "files.trimTrailingWhitespace": true,
   "editor.rulers": [120],
   "terminal.integrated.profiles.linux": {
     "bash": {
@@ -318,5 +194,35 @@
       "path": "/usr/local/bin/st"
     }
   },
-  "workbench.colorTheme": "hacker dark blue light PRO"
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "clangd.path": "/home/holmqvist/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/20.1.8/clangd_20.1.8/bin/clangd",
+  "clangd.onConfigChanged": "restart",
+  "editor.stickyScroll.enabled": false,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "alive.lsp.startCommand": [
+    "sbcl",
+    "--dynamic-space-size",
+    "4096",
+    "--eval",
+    "(ql:quickload '(:bordeaux-threads :usocket :cl-json :flexi-streams))",
+    "--eval",
+    "(require :asdf)",
+    "--eval",
+    "(asdf:load-system :alive-lsp)",
+    "--eval",
+    "(alive/server:start)"
+  ],
+  "json.schemaDownload.trustedDomains": {
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://raw.githubusercontent.com": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://www.schemastore.org/": true
+  }
 }
